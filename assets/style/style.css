@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(218, 236, 243);
+}
+
+
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: rgb(154, 219, 245);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    color: rgb(38, 112, 141);
+    font-size: 1.7em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(38, 112, 141);
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    color: rgb(6, 60, 82);
+}
+
+
+
+/* hamburger menu */
+.menu-toogle {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+
+.menu-toogle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -2px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toogle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(38, 112, 141);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+
+/* hamburger menu animation */
+.menu-toogle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toogle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toogle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toogle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toogle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+.hero {
+    margin: 10px auto;
+    background-image: url(../image/inaki-del-olmo-NIJuEQw0RKg-unsplash.png);
+    background-size: cover;
+    max-width: 1500px;
+    height: 500px;
+    display: flex;
+}
+
+.hero h1 {
+    color: #eaeaea;
+    margin: auto;
+    font-size: 5em;
+}
+
+.books .direction {
+    height: 30px;
+    background-color: rgb(154, 219, 245);
+    text-align: center;
+}
+
+.books .direction ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.books .direction ul li {
+    list-style: none;
+    margin-top: 5px;
+    display: flex;
+    flex: 2;
+}
+
+.books .direction ul li a {
+    text-decoration: none;
+    color: rgb(38, 112, 141);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-left: 1px solid rgb(38, 112, 141);
+    border-right: 1px solid rgb(38, 112, 141);
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.books .direction ul li a:hover {
+    color: rgb(89, 168, 202);
+}
+
+
+.book-type {
+    max-width: 1400px;
+    margin: 10px auto;
+}
+
+.book-type .collection {
+    margin-bottom: 40px;
+}
+
+.book-type .history .collection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book-type .history .collection .book {
+    width: 230px;
+    height: 300px;
+    background-color: rgb(180, 217, 232);
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.book-type .history .collection .book .book-child.h-1 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/download.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .history .collection .book .book-child.h-2 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/2.png);
+    /* background-size: cover; */
+    border-radius: 5px;
+}
+
+.book-type .history .collection .book .book-child.h-3 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/3.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .history .collection .book .book-child.h-4 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/4.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .history .collection .book .book-child.h-5 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/5.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .educational .collection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book-type .educational .collection .book {
+    width: 230px;
+    height: 300px;
+    background-color: rgb(180, 217, 232);
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.book-type .educational .collection .book .book-child.e-1 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/e-1.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .educational .collection .book .book-child.e-2 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/e-2.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .educational .collection .book .book-child.e-3 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/e-3.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .educational .collection .book .book-child.e-4 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/e-4.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .educational .collection .book .book-child.e-5 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/e-5.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biography .collection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book-type .biography .collection .book {
+    width: 230px;
+    height: 300px;
+    background-color: rgb(180, 217, 232);
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.book-type .biography .collection .book .book-child.b-1 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/b-1.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biography .collection .book .book-child.b-2 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/b-2.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biography .collection .book .book-child.b-3 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/b-3.png);
+    background-size: cover;
+    border-radius: 5px;
+    background-position: -13px 0;
+}
+
+.book-type .biography .collection .book .book-child.b-4 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/b-4.png);
+    background-size: cover;
+    border-radius: 5px;
+    background-position: -25px 0;
+}
+
+.book-type .biography .collection .book .book-child.b-5 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/b-5.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biology .collection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.book-type .biology .collection .book {
+    width: 230px;
+    height: 300px;
+    background-color: rgb(180, 217, 232);
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.book-type .biology .collection .book .book-child.bg-1 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/bg-1.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biology .collection .book .book-child.bg-2 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/bg-2.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.book-type .biology .collection .book .book-child.bg-3 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/bg-3.png);
+    background-size: cover;
+    border-radius: 5px;
+    background-position: -13px 0;
+}
+
+.book-type .biology .collection .book .book-child.bg-4 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/bg-4.png);
+    background-size: cover;
+    border-radius: 5px;
+    background-position: -25px 0;
+}
+
+.book-type .biology .collection .book .book-child.bg-5 {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    margin: 5px auto;
+    background-image: url(../image/bg-5.png);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+hr {
+    margin: 5px 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: rgb(154, 219, 245);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+.footer p {
+    color: rgb(38, 112, 141);
+}
+
+.footer p a {
+    text-decoration: none;
+    color: rgb(38, 112, 141);
+}
+
+/* responsive */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+
+/* ukuran mobile */
+@media screen and (max-width: 576px) {
+    .menu-toogle {
+        display: flex;
+    }
+    nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        color: #eaeaea;
+        margin: auto;
+        font-size: 50px;
+    }
+
+    .book-type .collection {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:576px) {
+    h2 {
+        width: 100%;
+    }
+    .book-type .collection {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
